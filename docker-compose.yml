@@ -1,7 +1,8 @@
 services:
   odoo-notifier:
     build: .
-    container_name: odoo-notifier
-    restart: unless-stopped
+    restart: always
     env_file:
-      - .env
+      - src/.env  # Apuntamos a la ubicación real de tu .env
+    volumes:
+      - ./data:/app/data  # Esto creará una carpeta 'data' en tu raíz para el last_id.txt
