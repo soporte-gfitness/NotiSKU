@@ -1,5 +1,0 @@
-services:
-  odoo-notifier:
-    build: .
-    container_name: odoo-notifier
-    restart: unless-stopped
